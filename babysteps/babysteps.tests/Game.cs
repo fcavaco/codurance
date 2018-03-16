@@ -15,18 +15,18 @@
             return false;
         }
 
-        internal void Play()
+        internal void Play(int row, int col)
         {
             var turn = _turn % 2;
             if (turn == 0)
             {
-                _player = "X";                
+                _player = "X";
             }
             else
             {
                 _player = "O";
             }
-            
+
             _turn++;
 
         }
