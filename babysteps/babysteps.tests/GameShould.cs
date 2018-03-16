@@ -87,5 +87,20 @@ namespace Tests
             Assert.IsTrue(game.Won("X"));
 
         }
+
+        [Test]
+        public void Ensure_a_player_wins_when_three_of_the_same_markers_are_in_a_left_diagonal()
+        {
+
+            game.Play(0, 0);
+            game.Play(0, 1);
+            game.Play(1, 1);
+            game.Play(0, 2);
+            game.Play(2, 2);
+            Assert.IsTrue(game.Won("X"));
+
+
+
+        }
     }
 }
