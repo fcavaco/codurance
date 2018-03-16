@@ -67,8 +67,10 @@ namespace Tests
 
             game.Play(0, 0);
             game.Play(1, 1);
+            game.Play(0, 1);
             game.Play(1, 2);
-            game.Play(0, 2);
+            game.Play(2, 1);
+            game.Play(2, 2);
             Assert.IsFalse(game.Won("O"));
 
         }

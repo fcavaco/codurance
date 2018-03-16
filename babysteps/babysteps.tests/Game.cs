@@ -8,7 +8,7 @@ namespace Tests
         private string _previousPlayer = "";
         private int _turn = 1;
 
-        private string[,] board = new string[3,3];
+        private string[,] board = new string[3, 3];
 
         public Game()
         {
@@ -61,17 +61,17 @@ namespace Tests
 
         public bool Won(string player)
         {
-            
-            return HasXWon(_previousPlayer);
+
+            return HasWon(_previousPlayer);
         }
 
-        private bool HasXWon( string player)
+        private bool HasWon(string marker)
         {
-            var marker = player;
+
             var cum = 0;
-            for(int row =0; row< board.GetLength(0); row++)
+            for (var row = 0; row < board.GetLength(0); row++)
             {
-                for (int col=0; col< board.GetLength(1); col++)
+                for (var col = 0; col < board.GetLength(1); col++)
                 {
                     if (marker.Equals(board[row, col]))
                     {
