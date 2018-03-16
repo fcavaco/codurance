@@ -15,5 +15,14 @@ namespace Tests
             Game game = new Game();
             Assert.IsTrue(game.IsFirst("X"));
         }
+
+        [Test]
+        public void Ensure_next_player_is_O()
+        {
+            Game game = new Game();
+            game.Play();
+
+            Assert.IsTrue(game.IsNext("O"));
+        }
     }
 }
