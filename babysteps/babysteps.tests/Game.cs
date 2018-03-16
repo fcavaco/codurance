@@ -3,6 +3,7 @@
     internal class Game
     {
         private string _player = "X";
+        private int _turn = 1;
         public Game()
         {
         }
@@ -16,7 +17,15 @@
 
         internal void Play()
         {
+            var turn = _turn % 2;
+            if (turn == 0)
+            {
+                _player = "X";
+            }
+
             _player = "O";
+            _turn++;
+
 
         }
 
