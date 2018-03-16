@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Tests
+﻿namespace Tests
 {
     internal class Game
     {
@@ -9,7 +7,7 @@ namespace Tests
         {
         }
 
-        public bool IsFirst(string player)
+        public bool PlayerIs(string player)
         {
             if (player.Equals("X")) return true;
 
@@ -22,11 +20,6 @@ namespace Tests
 
         }
 
-        internal bool? IsNext(string v)
-        {
-            if (player.Equals("O")) return true;
 
-            return false;
-        }
     }
 }

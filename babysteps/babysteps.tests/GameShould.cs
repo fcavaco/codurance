@@ -13,7 +13,7 @@ namespace Tests
         public void Ensure_X_Plays_First()
         {
             Game game = new Game();
-            Assert.IsTrue(game.IsFirst("X"));
+            Assert.IsTrue(game.PlayerIs("X"));
         }
 
         [Test]
@@ -22,7 +22,7 @@ namespace Tests
             Game game = new Game();
             game.Play();
 
-            Assert.IsTrue(game.IsNext("O"));
+            Assert.IsTrue(game.PlayerIs("O"));
         }
     }
 }
