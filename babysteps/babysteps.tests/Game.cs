@@ -1,4 +1,6 @@
-﻿namespace Tests
+﻿using System;
+
+namespace Tests
 {
     internal class Game
     {
@@ -15,8 +17,15 @@
             return false;
         }
 
+        private int lastRow;
+        private int lastCol;
         internal void Play(int row, int col)
         {
+            if(row == lastRow && col == lastCol)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             var turn = _turn % 2;
             if (turn == 0)
             {
@@ -28,7 +37,8 @@
             }
 
             _turn++;
-
+            lastRow = row;
+            lastCol = col;
         }
 
 

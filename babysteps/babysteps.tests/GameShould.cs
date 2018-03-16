@@ -22,7 +22,7 @@ namespace Tests
         [Test]
         public void Ensure_next_player_is_O()
         {
-            game.Play();
+            game.Play(1,1);
 
             Assert.IsTrue(game.PlayerIs("O"));
         }
@@ -31,9 +31,9 @@ namespace Tests
         public void Ensure_a_player_plays_in_alternate_positions()
         {
             Assert.IsTrue(game.PlayerIs("X"));
-            game.Play();
+            game.Play(1,1);
             Assert.IsTrue(game.PlayerIs("O"));
-            game.Play();
+            game.Play(1,2);
             Assert.IsTrue(game.PlayerIs("X"));
 
         }
