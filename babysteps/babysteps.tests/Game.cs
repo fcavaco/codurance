@@ -21,7 +21,7 @@ namespace Tests
         private int lastCol;
         internal void Play(int row, int col)
         {
-            if(row == lastRow && col == lastCol)
+            if (row == lastRow && col == lastCol)
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -42,5 +42,9 @@ namespace Tests
         }
 
 
+        public bool Won(string s)
+        {
+            return false;
+        }
     }
 }
