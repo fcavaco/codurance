@@ -30,7 +30,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "HOdj3GfHJji4ILR9f0Fqdna+adxhz+m7GMAfrYwMJsfwa+hFH9XS1nnc4i9XRoL1qmVddIAWlrGnf4sdYn+O7g==",
+      "sha512": "vE9irh7aQImKtJYCOTPTSsTIWRlXtW9bZDfrGNzqwbxYuGzcQ5Vim8FAP7PcTjf1YVLXN5gpAMPWHAaZl4zRew==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -177,30 +177,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\f_cav\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/fcavaco/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\codurance\\babysteps\\babysteps\\babysteps.csproj",
+      "projectUniqueName": "/mnt/c/projects/codurance/babysteps/babysteps/babysteps.csproj",
       "projectName": "babysteps",
-      "projectPath": "C:\\projects\\codurance\\babysteps\\babysteps\\babysteps.csproj",
-      "packagesPath": "C:\\Users\\f_cav\\.nuget\\packages\\",
-      "outputPath": "C:\\projects\\codurance\\babysteps\\babysteps\\obj\\",
+      "projectPath": "/mnt/c/projects/codurance/babysteps/babysteps/babysteps.csproj",
+      "packagesPath": "/home/fcavaco/.nuget/packages/",
+      "outputPath": "/mnt/c/projects/codurance/babysteps/babysteps/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\f_cav\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/fcavaco/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
