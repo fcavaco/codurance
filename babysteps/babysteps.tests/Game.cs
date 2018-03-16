@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 namespace Tests
 {
     internal class Game
@@ -12,10 +11,10 @@ namespace Tests
 
         public Game()
         {
-            
+
         }
 
-        
+
 
         public bool PlayerIs(string player)
         {
@@ -78,6 +77,12 @@ namespace Tests
                 if (rowWin) return true;
             }
 
+            for (var col = 0; col < board.GetLength(1); col++)
+            {
+                var win = ValidateColumn(marker, col);
+
+                if (win) return true;
+            }
             return false;
         }
 
@@ -91,11 +96,27 @@ namespace Tests
             var rightCell = board[row, RIGHT];
 
             var rowWin = (HasMarker(leftCell, marker)
-                          && HasMarker(centerCell,marker)
-                          && HasMarker(rightCell,marker));
+                          && HasMarker(centerCell, marker)
+                          && HasMarker(rightCell, marker));
             return rowWin;
         }
 
+
+        private bool ValidateColumn(string marker, int col)
+        {
+            const int TOP = 0;
+            const int CENTER = 1;
+            const int BOTTOM = 2;
+
+            var top = board[TOP, col];
+            var center = board[CENTER, col];
+            var bottom = board[BOTTOM, col];
+
+            var win = (HasMarker(top, marker)
+                          && HasMarker(center, marker)
+                          && HasMarker(bottom, marker));
+            return win;
+        }
         private bool HasMarker(string cell, string marker)
         {
             if (cell != null && cell.Equals(marker))

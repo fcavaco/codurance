@@ -74,5 +74,18 @@ namespace Tests
             Assert.IsFalse(game.Won("O"));
 
         }
+
+        [Test]
+        public void Ensure_a_player_wins_when_three_of_the_same_markers_are_in_a_column()
+        {
+
+            game.Play(0, 0);
+            game.Play(1, 1);
+            game.Play(1, 0);
+            game.Play(1, 2);
+            game.Play(2, 0);
+            Assert.IsTrue(game.Won("X"));
+
+        }
     }
 }
