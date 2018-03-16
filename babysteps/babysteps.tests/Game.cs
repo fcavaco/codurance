@@ -8,7 +8,9 @@
 
         public bool IsFirst(string player)
         {
-            return true ;
+            if (player.Equals("X")) return true;
+
+            return false;
         }
     }
 }

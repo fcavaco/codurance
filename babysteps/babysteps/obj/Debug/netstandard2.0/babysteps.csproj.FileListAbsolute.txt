@@ -6,3 +6,4 @@ C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.Ass
 C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.AssemblyInfo.cs
 C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.dll
 C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.pdb
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.csprojResolveAssemblyReference.cache
