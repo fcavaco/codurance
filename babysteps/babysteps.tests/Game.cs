@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace Tests
 {
     internal class Game
@@ -12,16 +12,10 @@ namespace Tests
 
         public Game()
         {
-            board[0, 0] = "E";
-            board[0, 1] = "E";
-            board[0, 2] = "E";
-            board[1, 0] = "E";
-            board[1, 1] = "E";
-            board[1, 2] = "E";
-            board[2, 0] = "E";
-            board[2, 1] = "E";
-            board[2, 2] = "E";
+            
         }
+
+        
 
         public bool PlayerIs(string player)
         {
@@ -87,12 +81,27 @@ namespace Tests
             return false;
         }
 
+        private const int LEFT = 0;
+        private const int CENTER = 1;
+        private const int RIGHT = 2;
         private bool ValidateRow(string marker, int row)
         {
-            var rowWin = (board[row, 0].Equals(marker)
-                          && board[row, 1].Equals(marker)
-                          && board[row, 2].Equals(marker));
+            var leftCell = board[row, LEFT];
+            var centerCell = board[row, CENTER];
+            var rightCell = board[row, RIGHT];
+
+            var rowWin = (HasMarker(leftCell, marker)
+                          && HasMarker(centerCell,marker)
+                          && HasMarker(rightCell,marker));
             return rowWin;
+        }
+
+        private bool HasMarker(string cell, string marker)
+        {
+            if (cell != null && cell.Equals(marker))
+                return true;
+
+            return false;
         }
     }
 }
