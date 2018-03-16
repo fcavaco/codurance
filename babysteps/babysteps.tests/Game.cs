@@ -2,21 +2,21 @@
 {
     internal class Game
     {
-        private string player;
+        private string _player = "X";
         public Game()
         {
         }
 
         public bool PlayerIs(string player)
         {
-            if (player.Equals("X")) return true;
+            if (_player.Equals(player)) return true;
 
             return false;
         }
 
         internal void Play()
         {
-            player = "O";
+            _player = "O";
 
         }
 
