@@ -79,14 +79,20 @@ namespace Tests
 
             for (var row = 0; row < board.GetLength(0); row++)
             {
-                var rowWin = (board[row, 0].Equals(marker)
-                             && board[row, 1].Equals(marker)
-                             && board[row, 2].Equals(marker));
+                var rowWin = ValidateRow(marker, row);
 
                 if (rowWin) return true;
             }
 
             return false;
+        }
+
+        private bool ValidateRow(string marker, int row)
+        {
+            var rowWin = (board[row, 0].Equals(marker)
+                          && board[row, 1].Equals(marker)
+                          && board[row, 2].Equals(marker));
+            return rowWin;
         }
     }
 }
