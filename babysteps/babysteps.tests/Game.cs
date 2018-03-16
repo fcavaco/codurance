@@ -12,6 +12,15 @@ namespace Tests
 
         public Game()
         {
+            board[0, 0] = "E";
+            board[0, 1] = "E";
+            board[0, 2] = "E";
+            board[1, 0] = "E";
+            board[1, 1] = "E";
+            board[1, 2] = "E";
+            board[2, 0] = "E";
+            board[2, 1] = "E";
+            board[2, 2] = "E";
         }
 
         public bool PlayerIs(string player)
@@ -68,18 +77,16 @@ namespace Tests
         private bool HasWon(string marker)
         {
 
-            var cum = 0;
             for (var row = 0; row < board.GetLength(0); row++)
             {
-                for (var col = 0; col < board.GetLength(1); col++)
-                {
-                    if (marker.Equals(board[row, col]))
-                    {
-                        cum++;
-                    }
-                }
+                var rowWin = (board[row, 0].Equals(marker)
+                             && board[row, 1].Equals(marker)
+                             && board[row, 2].Equals(marker));
+
+                if (rowWin) return true;
             }
-            return cum == 3;
+
+            return false;
         }
     }
 }
