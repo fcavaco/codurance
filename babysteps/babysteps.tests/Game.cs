@@ -83,14 +83,17 @@ namespace Tests
 
                 if (win) return true;
             }
+
+            if (ValidateDiagonal(marker)) return true;
             return false;
         }
 
-        private const int LEFT = 0;
-        private const int CENTER = 1;
-        private const int RIGHT = 2;
         private bool ValidateRow(string marker, int row)
         {
+            const int LEFT = 0;
+            const int CENTER = 1;
+            const int RIGHT = 2;
+
             var leftCell = board[row, LEFT];
             var centerCell = board[row, CENTER];
             var rightCell = board[row, RIGHT];
@@ -100,6 +103,8 @@ namespace Tests
                           && HasMarker(rightCell, marker));
             return rowWin;
         }
+
+
 
 
         private bool ValidateColumn(string marker, int col)
@@ -115,6 +120,24 @@ namespace Tests
             var win = (HasMarker(top, marker)
                           && HasMarker(center, marker)
                           && HasMarker(bottom, marker));
+            return win;
+        }
+
+        private bool ValidateDiagonal(string marker)
+        {
+            const int TOP = 0;
+            const int BOTTOM = 2;
+            const int LEFT = 0;
+            const int CENTER = 1;
+            const int RIGHT = 2;
+
+            var topLeft = board[TOP, LEFT];
+            var center = board[CENTER, CENTER];
+            var bottomRight = board[BOTTOM, RIGHT];
+
+            var win = (HasMarker(topLeft, marker)
+                       && HasMarker(center, marker)
+                       && HasMarker(bottomRight, marker));
             return win;
         }
         private bool HasMarker(string cell, string marker)
