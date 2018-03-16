@@ -19,6 +19,7 @@ namespace Tests
         internal void Play()
         {
             player = "O";
+
         }
 
         internal bool? IsNext(string v)
