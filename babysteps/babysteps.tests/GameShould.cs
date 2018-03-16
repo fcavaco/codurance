@@ -24,5 +24,17 @@ namespace Tests
 
             Assert.IsTrue(game.PlayerIs("O"));
         }
+
+        [Test]
+        public void Ensure_a_player_plays_in_alternate_positions()
+        {
+            Game game = new Game();
+            Assert.IsTrue(game.PlayerIs("X"));
+            game.Play();
+            Assert.IsTrue(game.PlayerIs("O"));
+            game.Play();
+            Assert.IsTrue(game.PlayerIs("X"));
+            
+        }
     }
 }
