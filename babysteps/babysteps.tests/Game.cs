@@ -4,6 +4,7 @@ namespace Tests
 {
     internal class Game
     {
+        private string player;
         public Game()
         {
         }
@@ -17,12 +18,14 @@ namespace Tests
 
         internal void Play()
         {
-            throw new NotImplementedException();
+            player = "O";
         }
 
         internal bool? IsNext(string v)
         {
-            throw new NotImplementedException();
+            if (player.Equals("O")) return true;
+
+            return false;
         }
     }
 }
