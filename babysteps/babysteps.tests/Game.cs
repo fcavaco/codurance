@@ -6,9 +6,9 @@
         {
         }
 
-        public bool IsFirst(object o)
+        public bool IsFirst(string player)
         {
-            throw new System.NotImplementedException();
+            return true ;
         }
     }
 }
