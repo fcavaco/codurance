@@ -24,28 +24,33 @@ namespace Tests
         {
             if (_turn > 1)
             {
-                if (row == lastRow && col == lastCol)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
+                ValidateOccupiedPosition(row, col);
             }
 
             _previousPlayer = _player;
             var turn = _turn % 2;
             if (turn == 0)
             {
-                
+
                 _player = "X";
             }
             else
             {
-                
+
                 _player = "O";
             }
 
             _turn++;
             lastRow = row;
             lastCol = col;
+        }
+
+        private void ValidateOccupiedPosition(int row, int col)
+        {
+            if (row == lastRow && col == lastCol)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
 
 

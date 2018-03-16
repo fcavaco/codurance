@@ -60,5 +60,17 @@ namespace Tests
             Assert.IsTrue(game.Won("X"));
 
         }
+
+        [Test]
+        public void Ensure_no_wins__without_three_of_the_same_markers_are_in_a_row()
+        {
+
+            game.Play(0, 0);
+            game.Play(1, 1);
+            game.Play(1, 2);
+            game.Play(0, 2);
+            Assert.IsFalse(game.Won("O"));
+
+        }
     }
 }
