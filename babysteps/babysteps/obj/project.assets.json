@@ -30,7 +30,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "vE9irh7aQImKtJYCOTPTSsTIWRlXtW9bZDfrGNzqwbxYuGzcQ5Vim8FAP7PcTjf1YVLXN5gpAMPWHAaZl4zRew==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -177,28 +177,36 @@
     ]
   },
   "packageFolders": {
-    "/home/fcavaco/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\alexa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/mnt/c/projects/codurance/babysteps/babysteps/babysteps.csproj",
+      "projectUniqueName": "C:\\projects\\codurance\\babysteps\\babysteps\\babysteps.csproj",
       "projectName": "babysteps",
-      "projectPath": "/mnt/c/projects/codurance/babysteps/babysteps/babysteps.csproj",
-      "packagesPath": "/home/fcavaco/.nuget/packages/",
-      "outputPath": "/mnt/c/projects/codurance/babysteps/babysteps/obj/",
+      "projectPath": "C:\\projects\\codurance\\babysteps\\babysteps\\babysteps.csproj",
+      "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+      "outputPath": "C:\\projects\\codurance\\babysteps\\babysteps\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/fcavaco/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

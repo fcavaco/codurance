@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    public class Tests
+    public class GameShould
     {
         [SetUp]
         public void Setup()
@@ -10,9 +10,10 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void Ensure_X_Plays_First()
         {
-            Assert.Pass();
+            Game game = new Game();
+            Assert.IsTrue(game.IsFirst("X"));
         }
     }
 }

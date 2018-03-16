@@ -1,0 +1,9 @@
+C:\projects\codurance\babysteps\babysteps\bin\Debug\netstandard2.0\babysteps.deps.json
+C:\projects\codurance\babysteps\babysteps\bin\Debug\netstandard2.0\babysteps.dll
+C:\projects\codurance\babysteps\babysteps\bin\Debug\netstandard2.0\babysteps.pdb
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.csprojResolveAssemblyReference.cache
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.csproj.CoreCompileInputs.cache
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.AssemblyInfoInputs.cache
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.AssemblyInfo.cs
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.dll
+C:\projects\codurance\babysteps\babysteps\obj\Debug\netstandard2.0\babysteps.pdb
