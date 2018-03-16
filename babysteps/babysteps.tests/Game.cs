@@ -5,6 +5,7 @@ namespace Tests
     internal class Game
     {
         private string _player = "X";
+        private string _previousPlayer = "";
         private int _turn = 1;
         public Game()
         {
@@ -21,18 +22,24 @@ namespace Tests
         private int lastCol;
         internal void Play(int row, int col)
         {
-            if (row == lastRow && col == lastCol)
+            if (_turn > 1)
             {
-                throw new ArgumentOutOfRangeException();
+                if (row == lastRow && col == lastCol)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
 
+            _previousPlayer = _player;
             var turn = _turn % 2;
             if (turn == 0)
             {
+                
                 _player = "X";
             }
             else
             {
+                
                 _player = "O";
             }
 
@@ -42,9 +49,9 @@ namespace Tests
         }
 
 
-        public bool Won(string s)
+        public bool Won(string player)
         {
-            return false;
+            return _previousPlayer.Equals(player);
         }
     }
 }
