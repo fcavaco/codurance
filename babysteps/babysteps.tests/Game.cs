@@ -20,12 +20,14 @@
             var turn = _turn % 2;
             if (turn == 0)
             {
-                _player = "X";
+                _player = "X";                
             }
-
-            _player = "O";
+            else
+            {
+                _player = "O";
+            }
+            
             _turn++;
-
 
         }
 
